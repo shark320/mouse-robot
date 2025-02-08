@@ -12,6 +12,10 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
+
+    implementation(libs.log4k.api)
+    implementation(libs.log4k.api.kotlin)
+    implementation(libs.log4k.core)
 }
 
 tasks.test {
@@ -29,6 +33,8 @@ application {
 
 // Create an executable JAR
 tasks.jar {
+    duplicatesStrategy = DuplicatesStrategy.WARN
+
     manifest {
         attributes["Main-Class"] = "com.vpavlov.mouse_robot.MainKt"
     }

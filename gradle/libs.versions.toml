@@ -1,0 +1,12 @@
+[versions]
+
+log4j2 = "2.24.3"
+log4j2-kotlin = "1.5.0"
+
+
+[libraries]
+log4k-api-kotlin = {group="org.apache.logging.log4j", name = "log4j-api-kotlin", version.ref = "log4j2-kotlin"}
+log4k-api = {group="org.apache.logging.log4j", name = "log4j-api", version.ref = "log4j2"}
+log4k-core = {group="org.apache.logging.log4j", name = "log4j-core", version.ref = "log4j2"}
+
+[plugins]
